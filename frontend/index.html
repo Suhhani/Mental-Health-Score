@@ -1,0 +1,296 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A student mental health score prediction tool.">
+    <title>MindMetric | Your Wellbeing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <a class="brand" href="#home">MentalHealthScore</a>
+
+        <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#prediction">Prediction</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <a class="header-link" href="#prediction">Get started</a>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">YOUR WELLBEING PROJECT</p>
+                <h1>Understand your digital habits and student wellbeing.</h1>
+                <p class="hero-description">
+                    Enter information about your daily routine, social media
+                    usage and lifestyle to receive a model-generated
+                    mental health score prediction.
+                </p>
+                <a class="primary-button" href="#prediction">Start prediction</a>
+                <p class="hero-note">
+                    This project is for educational purposes and is not a
+                    medical or psychological assessment.
+                </p>
+            </div>
+
+            <div class="hero-art" aria-hidden="true">
+                <div class="art-circle circle-one"></div>
+                <div class="art-circle circle-two"></div>
+                <div class="art-card">
+                    <span class="art-label">Daily balance</span>
+                    <div class="art-bars">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <p>Small habits matter.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="prediction-section" id="prediction">
+            <div class="section-heading">
+                <p class="eyebrow">YOUR DAILY ROUTINE</p>
+                <h2>Student information</h2>
+                <p>Complete the fields below to generate your prediction.</p>
+            </div>
+
+            <form id="predictionForm">
+
+                <div class="form-card">
+                    <div class="card-heading">
+                        <span class="step-number">01</span>
+                        <div>
+                            <h3>Personal information</h3>
+                            <p>Basic details about you.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="age">Age</label>
+                            <input type="number" id="age" min="10" max="100"
+                                   placeholder="Enter your age" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="gender">Gender</label>
+                            <select id="gender" required>
+                                <option value="">Select gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="country">Country</label>
+                            <select id="country" required>
+                                <option value="">Select country</option>
+                                <option value="India">India</option>
+                                <option value="USA">USA</option>
+                                <option value="Canada">Canada</option>
+                                <option value="Australia">Australia</option>
+                                <option value="UK">UK</option>
+                                <option value="Germany">Germany</option>
+                                <option value="Mexico">Mexico</option>
+                                <option value="Turkey">Turkey</option>
+                                <option value="France">France</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="academic_level">Academic level</label>
+                            <select id="academic_level" required>
+                                <option value="">Select level</option>
+                                <option value="Undergraduate">Undergraduate</option>
+                                <option value="Graduate">Graduate</option>
+                                <option value="High School">High School</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <div class="card-heading">
+                        <span class="step-number">02</span>
+                        <div>
+                            <h3>Social media habits</h3>
+                            <p>Tell us about your platform usage.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="most_used_platform">Most used platform</label>
+                            <select id="most_used_platform" required>
+                                <option value="">Select platform</option>
+                                <option value="Facebook">Facebook</option>
+                                <option value="LinkedIn">LinkedIn</option>
+                                <option value="Instagram">Instagram</option>
+                                <option value="Snapchat">Snapchat</option>
+                                <option value="Twitter">Twitter</option>
+                                <option value="YouTube">YouTube</option>
+                                <option value="TikTok">TikTok</option>
+                                <option value="LINE">LINE</option>
+                                <option value="KakaoTalk">KakaoTalk</option>
+                                <option value="VKontakte">VKontakte</option>
+                                <option value="WhatsApp">WhatsApp</option>
+                                <option value="WeChat">WeChat</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="purpose_of_use">Main purpose</label>
+                            <select id="purpose_of_use" required>
+                                <option value="">Select purpose</option>
+                                <option value="Networking">Networking</option>
+                                <option value="Education">Education</option>
+                                <option value="Entertainment">Entertainment</option>
+                                <option value="News">News</option>
+                            </select>
+                        </div>
+
+                        <div class="field">
+                            <label for="avg_daily_usage_hours">
+                                Average daily social media usage (hours)
+                            </label>
+                            <input type="number" id="avg_daily_usage_hours"
+                                   min="0" max="24" step="0.1"
+                                   placeholder="Example: 3.5" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="daily_unlocks">Daily phone unlocks</label>
+                            <input type="number" id="daily_unlocks"
+                                   min="0" step="1"
+                                   placeholder="Example: 50" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-card">
+                    <div class="card-heading">
+                        <span class="step-number">03</span>
+                        <div>
+                            <h3>Academic and lifestyle habits</h3>
+                            <p>Your daily activities and routine.</p>
+                        </div>
+                    </div>
+
+                    <div class="form-grid">
+                        <div class="field">
+                            <label for="study_hours">Daily study hours</label>
+                            <input type="number" id="study_hours"
+                                   min="0" max="24" step="0.1"
+                                   placeholder="Example: 5" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="physical_activity_hours">
+                                Daily physical activity (hours)
+                            </label>
+                            <input type="number" id="physical_activity_hours"
+                                   min="0" max="24" step="0.1"
+                                   placeholder="Example: 1" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="sleep_hours_per_night">
+                                Sleep per night (hours)
+                            </label>
+                            <input type="number" id="sleep_hours_per_night"
+                                   min="0" max="24" step="0.1"
+                                   placeholder="Example: 7.5" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="stress_level">Stress level</label>
+                            <select id="stress_level" required>
+                                <option value="">Select stress level</option>
+                                <option value="Low">Low</option>
+                                <option value="Medium">Medium</option>
+                                <option value="High">High</option>
+                                <option value="Very High">Very High</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <p id="formMessage" class="form-message" role="alert"></p>
+                    <button type="submit" id="submitButton" class="primary-button">
+                        Generate prediction
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <section class="results-section hidden" id="results">
+            <div class="section-heading">
+                <p class="eyebrow">YOUR RESULT</p>
+                <h2>Prediction summary</h2>
+                <p>Your result is generated by the trained machine learning model.</p>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card score-card">
+                    <p class="result-label">Predicted mental health score</p>
+
+                    <div class="score-circle">
+                        <span id="predictedScore">--</span>
+                    </div>
+
+                    <p class="score-caption">
+                        Model prediction, not a diagnosis.
+                    </p>
+                </div>
+
+                <div class="result-card">
+                    <h3>Your submitted information</h3>
+                    <div id="inputSummary" class="summary-list"></div>
+                </div>
+            </div>
+
+            <div class="result-actions">
+                <button type="button" id="editButton" class="secondary-button">
+                    Edit information
+                </button>
+                <button type="button" id="newPredictionButton" class="primary-button">
+                    New prediction
+                </button>
+            </div>
+        </section>
+
+        <section class="about-section" id="about">
+            <p class="eyebrow">ABOUT THE PROJECT</p>
+            <h2>Technology with a purpose.</h2>
+            <p>
+                MindMetric is an educational machine learning project that
+                explores the relationship between students' digital habits,
+                academic routines and lifestyle factors.
+            </p>
+            <p>
+                Its prediction is based on a trained regression model.
+                It should not be used to diagnose, treat or make decisions
+                about anyone's mental health.
+            </p>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>MentalHealthScore · Student Mental Health Score Prediction</p>
+        <p>Academic project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
